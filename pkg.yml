@@ -1,0 +1,4 @@
+pkg.name: nimble/IDS
+pkg.description: Meta-package for NimBLE IDS
+pkg.author: "Baptiste Boyer"
+

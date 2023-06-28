@@ -1,0 +1,7 @@
+syscfg.defs:
+	KNOB_DETECTION:
+	    description: Enables knob attack detection
+		value: 1
+	KNOB_MIN_ENTROPY:
+	    description: minimun entropy of the key
+		value: 16

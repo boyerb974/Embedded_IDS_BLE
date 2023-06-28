@@ -14,8 +14,6 @@ struct ble_npl_mutex lock;
 
 int sniff_HS_to_LL_cmd(void *data, size_t len)
 {
-    // ble_npl_mutex_pend(&lock, OS_TIMEOUT_NEVER);
-
     return 0;
 }
 
@@ -93,7 +91,7 @@ void parse(const void *buf, size_t len)
             if (tab_ch[7] == 0x01 || tab_ch[7] == 0x02)  //OP code Pairing request or 
                                                          //Pairing response
             {
-                if(tab_ch[12] != MYNEWT_VAL(KNOB_MIN_ENTROP))      //Check Max entropy
+                if(tab_ch[12] != MYNEWT_VAL(KNOB_MIN_ENTROPY))      //Check Max entropy
                     {
                         printf("WARNING: entropy value != 16 \n");
                     }
